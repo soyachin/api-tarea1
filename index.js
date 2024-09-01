@@ -99,7 +99,6 @@ app.put('/personajes/:id', (req, res) => {
             }
 
             else {
-                const id = this.lastID
                 res.status(200).send({id, nombre, clase})
             }
         });
