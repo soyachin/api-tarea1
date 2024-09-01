@@ -100,7 +100,7 @@ app.put('/personajes/:id', (req, res) => {
 
             else {
                 const id = this.lastID
-                res.status(201).send({id, nombre, clase})
+                res.status(200).send({id, nombre, clase})
             }
         });
     }
@@ -122,7 +122,7 @@ app.delete('/personajes/:id', (req, res) => {
                 res.status(404).send('No existe ese personaje.');
             }
             else {
-                res.status(201).send("Personaje eliminado")
+                res.status(200).send("Personaje eliminado")
             }
         });
 
