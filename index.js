@@ -87,8 +87,8 @@ app.put('/personajes/:id', (req, res) => {
         res.status(400).send('Nombre o clase vacios.');
     }
     else {
-        const sql = 'update personajes set nombre = ?, clase = ? where id = ? values(?,?,?)'
-        db.run(sql, [id,nombre, clase], function (error) {
+        const sql = 'UPDATE personajes SET nombre = ?, clase = ? WHERE id = ?'
+        db.run(sql, [nombre, clase, id], function (error) {
             if (error) {
                 console.error(error.message);
                 res.status(500).send('Error');
